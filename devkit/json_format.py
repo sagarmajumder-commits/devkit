@@ -26,6 +26,7 @@ def format_json_file(filepath: str, indent: int = 2, sort_keys: bool = True) -> 
         with open(path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
+        # ensure_ascii=False preserves unicode characters
         formatted = json.dumps(data, indent=indent, sort_keys=sort_keys, ensure_ascii=False)
         print(formatted)
         return True
