@@ -27,6 +27,7 @@ def format_json_file(filepath: str, indent: int = 2, sort_keys: bool = True) -> 
             data = json.load(f)
         
         # ensure_ascii=False preserves unicode characters
+        # sort_keys=True makes output consistent and easier to diff
         formatted = json.dumps(data, indent=indent, sort_keys=sort_keys, ensure_ascii=False)
         print(formatted)
         return True
