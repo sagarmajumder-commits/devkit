@@ -11,7 +11,7 @@ def format_json_file(filepath: str, indent: int = 2, sort_keys: bool = True) -> 
     
     Args:
         filepath: Path to JSON file
-        indent: Indentation spaces
+        indent: Indentation spaces (default 2 for readability)
         sort_keys: Whether to sort keys alphabetically
         
     Returns:
