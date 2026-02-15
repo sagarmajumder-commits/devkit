@@ -11,7 +11,7 @@ def format_json_file(filepath: str, indent: int = 2, sort_keys: bool = True) -> 
     
     Args:
         filepath: Path to JSON file
-        indent: Indentation spaces (default 2 for readability)
+        indent: Indentation spaces (default 2 for readability and compact output)
         sort_keys: Whether to sort keys alphabetically
         
     Returns:
@@ -28,6 +28,7 @@ def format_json_file(filepath: str, indent: int = 2, sort_keys: bool = True) -> 
         
         # ensure_ascii=False preserves unicode characters
         # sort_keys=True makes output consistent and easier to diff
+        # indent=2 balances readability with file size
         formatted = json.dumps(data, indent=indent, sort_keys=sort_keys, ensure_ascii=False)
         print(formatted)
         return True
