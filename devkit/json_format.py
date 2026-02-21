@@ -23,6 +23,7 @@ def format_json_file(filepath: str, indent: int = 2, sort_keys: bool = True) -> 
             print(f"Error: File not found: {filepath}", file=sys.stderr)
             return False
             
+        # Load and parse JSON content
         with open(path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
